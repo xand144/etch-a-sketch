@@ -1,0 +1,9 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #8A95FF;
+}
+
+#mainContainer {
+    display: flex;
+    flex-direction: column;
+}
