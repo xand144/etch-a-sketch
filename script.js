@@ -1,8 +1,8 @@
-function createGrid(width, height) {
-    for (let i = 1; i <= height; i++) {
+function createGrid(squaresPerSide) {
+    for (let i = 1; i <= squaresPerSide; i++) {
         const row = document.createElement("div");
         row.classList.add("row");
-        for (let i = 1; i <= width; i++) {
+        for (let i = 1; i <= squaresPerSide; i++) {
             const square = document.createElement("div");
             square.classList.add("square");
             row.appendChild(square);
@@ -13,4 +13,4 @@ function createGrid(width, height) {
 
 const grid = document.querySelector("#grid-container");
 
-createGrid(16, 16);
+createGrid(16);
