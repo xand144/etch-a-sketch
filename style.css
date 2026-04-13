@@ -14,7 +14,9 @@ h1 {
 #grid-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    width: fit-content;
+    margin: auto;
+    border: 1px solid black;
 }
 
 .row {
@@ -27,5 +29,5 @@ h1 {
     width: 50px;
     height: 50px;
     background-color: white;
-    border: 1px solid #00000099;
+    border: 1px solid black;
 }
