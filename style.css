@@ -9,6 +9,50 @@ body {
 
 h1 {
     text-align: center;
+    margin: 0;
+    font-size: 24px;
+    color: white;
+    width: fit-content;
+}
+
+#btns {
+    display: flex;
+    gap: 6px;
+}
+
+#menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    min-width: fit-content;
+    max-width: 600px;
+    padding: 10px;
+    border: 6px double white;
+    border-radius: 6px;
+    margin: 10px auto;
+    background-color: #15162E;
+}
+
+#menu button {
+    background-color: #5C6CFF;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 16px;
+    border: 2px solid white;
+    border-radius: 6px;
+    height: fit-content;
+    padding-bottom: 2px;
+}
+
+#menu button:hover {
+    color: white;
+    background-color: #0019FF;
+}
+
+#menu,
+#menu button {
+    border-radius: 6px;
 }
 
 #grid-container {
@@ -20,6 +64,10 @@ h1 {
     border: 1px solid #00000044;
 }
 
+.grid {
+    border: 1px solid #00000044;
+}
+
 .row {
     display: flex;
     flex: auto;
@@ -28,7 +76,6 @@ h1 {
 .square {
     flex: auto;
     background-color: white;
-    border: 1px solid #00000044;
 }
 
 .square.black {
