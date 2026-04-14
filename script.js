@@ -9,8 +9,19 @@ function createGrid(squaresPerSide) {
         }
         grid.appendChild(row);
     }
+    document.addEventListener("DOMContentLoaded", () => {
+        squares = document.querySelectorAll(".square");
+        addEvents();
+    })
+}
+
+function addEvents() {
+    squares.forEach(square => square.addEventListener("mouseenter", function(e) {
+        e.target.classList.add("black");
+    }))
 }
 
 const grid = document.querySelector("#grid-container");
+let squares;
 
 createGrid(16);

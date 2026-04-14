@@ -22,13 +22,15 @@ h1 {
 
 .row {
     display: flex;
-    flex: 1 0 auto;
+    flex: auto;
 }
 
 .square {
-    /* min-width: 50px;
-    min-height: 50px; */
-    flex: 1 0 auto;
+    flex: auto;
     background-color: white;
     border: 1px solid #00000044;
+}
+
+.square.black {
+    background-color: black;
 }
