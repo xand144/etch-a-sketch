@@ -13,9 +13,6 @@ function createGrid(squaresPerSide) {
         grid.appendChild(row);
         squares = document.querySelectorAll(".square");
     }
-    document.addEventListener("DOMContentLoaded", () => {
-        addEvents();
-    })
 }
 
 function replaceGrid() {
@@ -23,7 +20,7 @@ function replaceGrid() {
     let size;
     do {
         size = prompt("How many squares per side? (Max 100)", 16);
-    } while (isNaN(size) || size === null || size < 1 || size > 100);
+    } while (isNaN(size) || size < 1 || size > 100)
     createGrid(size);
 }
 
@@ -32,7 +29,6 @@ function addEvents() {
         replaceGrid();
     })
     btnGridView.addEventListener("click", () => {
-        squares = document.querySelectorAll(".square");
         squares.forEach(square => square.classList.toggle("grid"));
     })
 }
@@ -41,6 +37,7 @@ const grid = document.querySelector("#grid-container");
 const btnNewGrid = document.querySelector("#new-grid");
 const btnGridView = document.querySelector("#toggle-gridview");
 
-let squares = document.querySelectorAll(".square");
+let squares;
 
 createGrid(16);
+addEvents();
