@@ -5,12 +5,14 @@ function createGrid(squaresPerSide) {
         for (let i2 = 1; i2 <= squaresPerSide; i2++) {
             const square = document.createElement("div");
             square.classList.add("square", "grid");
+            let opacity = 0;
             square.addEventListener("mouseenter", function(e) {
-                const rgb = `rgb(${random()}, ${random()}, ${random()}`;
+                if (opacity < 1) opacity += 0.1;
+                const rgb = `rgba(${random()}, ${random()}, ${random()}, ${opacity})`;
                 if (currentColour === "rgb") {
                     e.target.style.backgroundColor = rgb;
                 } else if (currentColour === "black") {
-                    e.target.setAttribute("style", "background-color: rgb(0, 0, 0)");
+                    e.target.setAttribute("style", `background-color: rgba(0, 0, 0, ${opacity})`);
                 }
             })
             row.appendChild(square);

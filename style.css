@@ -77,7 +77,3 @@ h1 {
 .square {
     flex: auto;
 }
-
-.square.black {
-    background-color: black;
-}
